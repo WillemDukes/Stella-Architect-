@@ -1,159 +1,175 @@
-/* ================= ROOT COLOUR PALETTE ================= */
-:root {
-  --primary-color: #2f5933;
-  --secondary-color: #a3b899;
-  --background-color: #f6f8f5;
-  --link-color: #2a4d29;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willem Dukes | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-* {
-  box-sizing: border-box;
-}
+  <body>
+    <!-- ================= HERO ================= -->
+    <header class="hero">
+      <div class="intro">
+        <img
+          src="Assets/Images/FullSizeRender.jpg"
+          alt="Profile picture"
+          class="profile"
+        >
+        <h1>Willem Dukes</h1>
+        <h2>Integrated Science &amp; Technology Student</h2>
+        <p>
+          I am a sophomore ISAT student with interests in systems thinking,
+          sustainability, and applied problem-solving.
+          I enjoy translating complex systems into clear, real-world solutions
+          through hands-on projects.
+        </p>
+      </div>
+    </header>
 
-/* ================= GLOBAL ================= */
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: var(--background-color);
-  color: var(--primary-color);
-  line-height: 1.6;
-}
+    <main>
+      <!-- ================= ISAT 290 PROJECT ================= -->
+      <section id="ISAT290" class="project">
 
-/* ================= HERO ================= */
-header.hero {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  padding: 2rem 1rem;
-  text-align: center;
-}
+        <!-- CENTERED HEADER -->
+        <div class="centered-header">
+          <h2>Dynamics Model of How Infectious Disease Spreads</h2>
+          <p><strong>ISAT 290 | Final Project</strong></p>
+        </div>
 
-header .profile {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
+        <p>
+          James Madison University offers an interdisciplinary science major
+          called ISAT (Integrated Science and Technology), designed to prepare
+          students for a wide range of applied science and technology fields,
+          including sustainability, data science, and systems engineering.
+          In ISAT 290, a course focused on modeling feedback loops and system
+          behavior, my classmates and I developed an infection dynamics model
+          using Stella Architect to explore how an infectious disease would
+          realistically spread through a population.
+        </p>
 
-/* ================= MAIN CONTENT ================= */
-main {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1rem;
-}
+        <p>
+          This Stella Architect model simulates the spread of an infectious
+          disease using an extended SEIR (Susceptible, Exposed, Infected,
+          Recovered) framework. Individuals transition between susceptible,
+          exposed, infected, hospitalized, quarantined, recovered, and deceased
+          states based on contact rates, time delays, and behavioral responses.
+          The model incorporates public health interventions such as vaccination,
+          quarantine, and social distancing while tracking cumulative outcomes
+          including total deaths, hospitalizations, and economic costs. By
+          adjusting intervention parameters and observing resulting feedback
+          loops, the model demonstrates how behavioral and policy decisions
+          influence both health and economic outcomes during an outbreak.
+        </p>
 
-section.project {
-  margin-bottom: 2.5rem;
-  padding-bottom: 2.5rem;
-  border-bottom: 1px solid #e0e7de;
-}
+        <!-- ================= SYSTEM DIAGRAM IMAGES ================= -->
+        <div class="project-images">
+          <figure>
+            <img src="Assets/Images/IMG_6276.jpg" alt="">
+            <figcaption>This is me working with my Assistant Scout Master</figcaption>
+          </figure>
 
-section.project h2 {
-  color: var(--primary-color);
-  margin-top: 0;
-}
+          <figure>
+            <img src="Assets/Images/IMG_3353.jpg" alt="">
+            <figcaption>
+              I used a GNSS Data Logger to walk around the trail and build a trail outline
+            </figcaption>
+          </figure>
 
-/* ================= CENTERED SECTIONS ================= */
-.centered-header {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
+          <figure>
+            <img src="Assets/Images/IMG_0758.jpg" alt="">
+            <figcaption>
+              The finished trail map showing plant ID signs (blue) and ecosystem signs (orange)
+            </figcaption>
+          </figure>
+        </div>
 
-.centered-section {
-  text-align: center;
-}
+        <!-- ================= IFRAME INTRO ================= -->
+        <h3 class="iframe-text">
+          Use the interactive interface below to explore how different control
+          parameters influence disease spread dynamics and outcome graphs.
+        </h3>
 
-/* ================= IFRAME TEXT & EMBED (NEW) ================= */
-.iframe-text {
-  text-align: center;
-  margin-bottom: 8px;   /* 👈 removes dead space */
-}
+        <!-- ================= STELLA IFRAME ================= -->
+        <div class="iframe-container">
+          <iframe
+            src="https://exchange.iseesystems.com/public/willem-dukes/isat-290-infection-diagram/index.html#page1"
+            title="ISAT 290 Infection Dynamics Model">
+          </iframe>
+        </div>
 
-.iframe-container {
-  margin-top: 0;
-  padding-top: 0;
-}
+        <!-- ================= MODEL INSIGHTS ================= -->
+        <h3>Model Insights &amp; Takeaways</h3>
 
-.iframe-container iframe {
-  display: block;
-  width: 100%;
-  height: 700px;
-  border: none;
-}
+        <p>
+          Interacting with the model highlights how small changes in behavior
+          and public health policy can produce large differences in outcomes
+          over time. Adjustments to vaccination effectiveness, quarantine
+          participation, or social distancing rapidly alter infection curves,
+          hospitalization demand, and total economic costs. The simulation
+          clearly illustrates how reinforcing feedback loops can accelerate
+          disease spread, while balancing loops can slow or stabilize outbreaks.
+        </p>
 
-/* ================= LISTS ================= */
-section.project ul {
-  margin: 0.5rem 0 0;
-  padding-left: 1.2rem;
-}
+        <p>
+          Developing this system reinforced the importance of accounting for
+          delays, nonlinear relationships, and human behavior when modeling
+          complex systems. Factors such as incubation periods, delayed
+          hospitalization, and partial compliance significantly influence
+          system behavior and make simple cause-and-effect assumptions
+          unreliable. This project emphasized the value of system dynamics as a
+          tool for understanding real-world problems that cannot be captured
+          through static analysis alone.
+        </p>
 
-section.project li {
-  margin-bottom: 0.35rem;
-}
+        <p>
+          Beyond the classroom, this type of modeling has applications in public
+          health planning, policy evaluation, and resource management. By
+          simulating intervention strategies before they are implemented,
+          decision-makers can better anticipate unintended consequences and
+          evaluate tradeoffs between health outcomes and economic costs. This
+          project reflects my interest in applying systems thinking to inform
+          data-driven decision-making in complex, real-world environments.
+        </p>
 
-/* ================= IMAGE GRID ================= */
-.project-images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-}
+        <p><strong>Skills Demonstrated:</strong></p>
+        <ul>
+          <li>System dynamics modeling and feedback loop analysis</li>
+          <li>Scenario testing and parameter sensitivity analysis</li>
+          <li>Translating complex systems into interactive simulations</li>
+          <li>Technical communication of model structure and results</li>
+          <li>Applying systems thinking to public health challenges</li>
+        </ul>
+      </section>
 
-.project-images figure {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+      <!-- ================= RESUME & CONTACT ================= -->
+      <section id="resume-contact" class="project centered-section">
+        <h2>Resume &amp; Contact</h2>
 
-.project-images img {
-  width: 100%;
-  max-width: 320px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-}
+        <p>
+          Download my resume:
+          <a href="Assets/Willem_Dukes_Resume.pdf" download>
+            Willem Dukes Resume (PDF)
+          </a>
+        </p>
 
-.project-images figcaption {
-  font-size: 0.85rem;
-  margin-top: 0.4rem;
-  text-align: center;
-  max-width: 320px;
-}
+        <p>Email: <a href="mailto:willemdukes@gmail.com">willemdukes@gmail.com</a></p>
+        <p>LinkedIn:
+          <a href="https://www.linkedin.com/in/willemdukes" target="_blank">
+            linkedin.com/in/willemdukes
+          </a>
+        </p>
+        <p>GitHub:
+          <a href="https://github.com/willemdukes" target="_blank">
+            github.com/willemdukes
+          </a>
+        </p>
+      </section>
+    </main>
 
-/* ================= LINKS ================= */
-a {
-  color: var(--primary-color);
-  font-weight: 500;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  text-align: center;
-  padding: 1rem;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 600px) {
-  header .profile {
-    width: 120px;
-    height: 120px;
-  }
-
-  .project-images img {
-    height: 200px;
-  }
-
-  .iframe-container iframe {
-    height: 500px;
-  }
-}
+    <footer>
+      <p>&copy; 2026 Willem Dukes. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
