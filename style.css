@@ -24,7 +24,7 @@ body {
 header.hero {
   background-color: var(--secondary-color);
   color: var(--primary-color);
-  padding: 2rem 1rem;
+  padding: 2.5rem 1rem;
   text-align: center;
 }
 
@@ -40,87 +40,84 @@ header .profile {
 main {
   max-width: 960px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1.25rem;
 }
 
 section.project {
-  margin-bottom: 2.5rem;
-  padding-bottom: 2.5rem;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
   border-bottom: 1px solid #e0e7de;
 }
 
 section.project h2 {
-  color: var(--primary-color);
   margin-top: 0;
 }
 
 /* ================= CENTERED SECTIONS ================= */
 .centered-header {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 .centered-section {
   text-align: center;
 }
 
-/* ================= IFRAME TEXT & EMBED (NEW) ================= */
-.iframe-text {
-  text-align: center;
-  margin-bottom: 8px;   /* 👈 removes dead space */
+/* ================= IMAGE DISPLAY ================= */
+.project-images {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0;
 }
 
-.iframe-container {
-  margin-top: 0;
-  padding-top: 0;
+.project-images figure {
+  margin: 0;
+  text-align: center;
+}
+
+.project-images img {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-images figcaption {
+  max-width: 960px;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* ================= IFRAME ================= */
+.iframe-text {
+  text-align: center;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
 }
 
 .iframe-container iframe {
-  display: block;
   width: 100%;
   height: 700px;
   border: none;
 }
 
-/* ================= LISTS ================= */
-section.project ul {
-  margin: 0.5rem 0 0;
-  padding-left: 1.2rem;
-}
-
-section.project li {
-  margin-bottom: 0.35rem;
-}
-
-/* ================= IMAGE GRID ================= */
-.project-images {
+/* ================= 3-COLUMN INFO GRID ================= */
+.info-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
 }
 
-.project-images figure {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.info-grid ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 0;
 }
 
-.project-images img {
-  width: 100%;
-  max-width: 320px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-}
-
-.project-images figcaption {
-  font-size: 0.85rem;
-  margin-top: 0.4rem;
-  text-align: center;
-  max-width: 320px;
+.info-grid li {
+  margin-bottom: 0.4rem;
 }
 
 /* ================= LINKS ================= */
@@ -143,37 +140,19 @@ footer {
 }
 
 /* ================= MOBILE ================= */
-@media (max-width: 600px) {
-  header .profile {
-    width: 120px;
-    height: 120px;
-  }
-
-  .project-images img {
-    height: 200px;
+@media (max-width: 900px) {
+  .info-grid {
+    grid-template-columns: 1fr;
   }
 
   .iframe-container iframe {
     height: 500px;
   }
 }
-/* ================= 3-COLUMN INFO GRID ================= */
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
-}
 
-.info-grid ul {
-  padding-left: 1.2rem;
-  margin: 0.5rem 0 0;
-}
-
-/* Stack nicely on smaller screens */
-@media (max-width: 900px) {
-  .info-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 600px) {
+  header .profile {
+    width: 120px;
+    height: 120px;
   }
 }
-
